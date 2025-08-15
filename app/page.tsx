@@ -1,9 +1,23 @@
-import Image from "next/image";
+import Layout from "../layout";
+import Test from "../components/test"
+import { ContactSection } from "../components/contactsection";
+import { ItemSection } from "@/components/itemsection";
+import { ItemSelection } from "@/components/itemselection";
+import { WelcomeSection } from "@/components/welcomesection";
+import { HomeSection } from "@/components/homesection";
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      hiii
-    </div>
+    <Layout>
+      {/* <Test /> */}
+      <HomeSection />
+      <WelcomeSection />
+      <div className="relative"> {/* keeps sticky only inside */}
+        <ItemSelection />
+        <ItemSection />
+      </div>
+      <ContactSection />
+    </Layout>
   );
 }
