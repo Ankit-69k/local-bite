@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -76,6 +80,27 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* custom fonts
+  --font-agbalumo: 'Agbalumo', cursive; */
+
+
+  /* framer colours custom */
+  --lighter: #FFF7F0;
+  --light: #FFEBD6;
+  --mid: #F7D2AD;
+  --more-mid: #DEB68E;
+  --dark: #966133;
+  --super-dark: #704015;
+  
+  
+  /* Framer-inspired palette */
+  --color-background: var(--lighter);
+  --color-foreground: var(--light);
+  --color-secondary: var(--mid);
+  --color-secondary-dark: var(--more-mid);
+  --color-primary: var(--dark);
+  --color-primary-dark: var(--super-dark);
 }
 
 .dark {
@@ -119,4 +144,50 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+.font-agbalumo {
+  font-family: var(--font-agbalumo);
+}
+
+/* For wrapping text in 1–3 lines without ellipsis */
+@layer utilities {
+  .line-wrap-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+
+    line-clamp: 3;                 /* Standard property */
+    overflow: hidden;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
