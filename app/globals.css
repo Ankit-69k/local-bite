@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -84,16 +82,14 @@
   /* custom fonts
   --font-agbalumo: 'Agbalumo', cursive; */
 
-
   /* framer colours custom */
-  --lighter: #FFF7F0;
-  --light: #FFEBD6;
-  --mid: #F7D2AD;
-  --more-mid: #DEB68E;
+  --lighter: #fff7f0;
+  --light: #ffebd6;
+  --mid: #f7d2ad;
+  --more-mid: #deb68e;
   --dark: #966133;
   --super-dark: #704015;
-  
-  
+
   /* Framer-inspired palette */
   --color-background: var(--lighter);
   --color-foreground: var(--light);
@@ -151,8 +147,8 @@
 }
 
 .scrollbar-hidden {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @keyframes scroll {
@@ -182,11 +178,10 @@
     text-overflow: ellipsis;
     white-space: normal;
 
-    line-clamp: 3;                 /* Standard property */
+    line-clamp: 3; /* Standard property */
     overflow: hidden;
   }
 }
-
 
 html {
   scroll-behavior: smooth;
