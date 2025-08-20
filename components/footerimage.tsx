@@ -8,7 +8,7 @@ const FooterImage = ({ src, alt = "image" }: FooterImageProps) => {
         <div className="flex-shrink-0 w-[22rem]">
             <img src={src}
                 alt={alt}
-                className="w-full h-80 rounded-lg object-cover"
+                className="w-full scale-85 rounded-lg object-cover"
                 loading="lazy" />
         </div>
     )

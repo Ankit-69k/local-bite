@@ -31,7 +31,7 @@ function Footer() {
                 {/* <FooterImage src="" /> */}
             </div>
             <div className='overflow-hidden w-full'>
-                <div className='flex overflow-x-auto gap-4 p-4 scrollbar-hidden mt-16'>
+                <div className='flex overflow-x-auto justify-evenly p-4 scrollbar-hidden mt-16'>
                     {Images.map((item) => <FooterImage src={item.src} alt={item.alt} key={item.src} />)}
                     {/* Duplicate the items to make looping seamless */}
                     {Images.map((item, index) => (
